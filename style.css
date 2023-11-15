@@ -1,8 +1,62 @@
-CSS Grid Property
+.container{
+    border: 2px solid red;
+    display: grid;
+    gap: 20px;
+    /* gap = row-gap  */
+    row-gap: 20px;
+    column-gap: 5px;
+    grid-template-columns: 100px 200px 300px;
+    /* grid-template-columns:; we can define absolute and relative values */
+    grid-template-columns: 20vw 200px 300px;
+    /* grid-template-columns: 1fr; fr= fraction */
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: repeat(4, 1fr); this will allow us to reduce code  */
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: auto 200px auto;
 
 
-Grid Container Properties
+    grid-template-rows: 200px 80px;
+    /* grid-auto-rows: 150px; rest of the rows height will be define by this property  */
+    grid-auto-rows: 150px;
 
-gap
-gap-template-columns
-grid-templae-rows
+
+
+    justify-content: center;
+    justify-content: end;
+    /* justify-content: space-around; and other values of jc  */
+
+    /* align-content: ; is different from align-items: ; */
+
+    align-content: center;
+
+    align-items: center ;
+
+}
+.box{
+    border: 2px solid green;
+}
+#box-1{
+    background-color: bisque;
+    /* justify-content: stretch; default  */
+    justify-self: center;
+    
+    align-self: start;
+    align-self: end;
+    align-self: center;
+
+    grid-column-start: 1 ;
+    grid-column-end: 2  ;
+    /* grid-column:  1/2; shorthand of grid-column-start-end: ; */
+    grid-column: 1 / span 2;
+    grid-column: 1/ -1;
+
+    grid-row-start: 1 ;
+    grid-row-end: 2  ;
+    /* grid-row:  1/2; shorthand of grid-row-start-end: ; */
+    grid-row: 1 / span 2;
+    grid-row: 1/ -1;
+
+    /* grid-area: 1/ -1; shorthand of  grid-column and grid-row */
+    grid-area: 1/2/3/3;
+}
+}
