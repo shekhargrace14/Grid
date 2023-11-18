@@ -25,7 +25,7 @@ Grid template areas
 .grid-container{
     grid-template-areas:
         "header header header header header header"
-        "menu menu menu menu right right"
+        "menu main main main right right"
         "menu footer footer footer footer footer"
 }
 
@@ -33,14 +33,14 @@ Grid template areas
     grid-area:header;
 }
 .item2{
-    grid-area:header;
+    grid-area:menu;
 }
 .item3{
-    grid-area:header;
+    grid-area:main;
 }
 .item4{
-    grid-area:header;
+    grid-area:right;
 }
 .item5{
-    grid-area:header;
+    grid-area:footer;
 }
